@@ -17,7 +17,7 @@ describe("Example", () => {
       .withTimeout(5000);
     });
 
-    it("should show have Like count 0 by defualt", async () => {
+    it("should show the Like count of 66 by defualt", async () => {
       let attributes = await element(by.id("0/likeCounter")).getAttributes();
       const likeCount = parseFloat(attributes.text.split(" ")[0]);
       jestExpect(likeCount).toBe(66); // Starting value is 66
