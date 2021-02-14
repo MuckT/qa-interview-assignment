@@ -171,6 +171,7 @@ class PostItem extends React.Component<IPostItemProps> {
               style={styles.animatedIcon}
               duration={500}
               delay={200}
+              testID={`${id}/mainPostContent`}
             />
             {isImage ? <Image source={image} style={{ height: 270 }} /> : null}
             {isVideo ? (
