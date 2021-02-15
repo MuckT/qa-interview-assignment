@@ -20,6 +20,7 @@ const storyItems: React.StatelessComponent = (props: any) => {
               image={avatar.src}
               title="Your story"
               clicked={props.onClicked}
+              testId={`${avatar.id}/story`}
             />
           ) : (
             <StoryItem
@@ -28,6 +29,7 @@ const storyItems: React.StatelessComponent = (props: any) => {
               key={avatar.id}
               image={avatar.src}
               clicked={props.onClicked}
+              testId={`${avatar.id}/story`}
             />
           )
         )}
