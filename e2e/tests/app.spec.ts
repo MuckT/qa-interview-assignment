@@ -200,6 +200,10 @@ describe("Activity Feed", () => {
       .withTimeout(5000);
     });
 
+    afterAll(async () => {
+      await device.reloadReactNative(); // Prevent app from staying in hung state
+    });
+
     // This is mostly to demonstrate scrolling on a test - All these tests will fail due to a bug in the app
     const stories = ['Steeve', 'Tyrion'] // Simple mock - would have used a larger mock of an array of objects if needed.
     stories.forEach(usersStory=> {
