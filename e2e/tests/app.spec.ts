@@ -166,7 +166,7 @@ describe("Activity Feed", () => {
     });
 
     // Would be better to do with a mock so the post starts in a liked state; however, mocks cannot be run per it block in detox
-    it(`should decrement the Like count when the Like button is pressed on a ${randomPost.author}'s post`, async () => {
+    it(`should decrement the Like count when the Like button is pressed twice on a ${randomPost.author}'s post`, async () => {
       await element(by.id(`${randomPost.id}/likeButton`)).tap();
       await new Promise(resolve => setTimeout(resolve, 200));
       let attributes = await element(by.id(`${randomPost.id}/likeCount`)).getAttributes();
