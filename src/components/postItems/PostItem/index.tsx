@@ -115,7 +115,7 @@ class PostItem extends React.Component<IPostItemProps> {
     const { liked } = this.state;
     const totalLikes = parseFloat(likeCount) + (liked ? 1 : 0);
     return (
-      <View style={styles.container}>
+      <View testID={`${id}/post`} style={styles.container}>
         <TouchableOpacity activeOpacity={0.9} onPress={this.handleOnPress}>
           <View style={styles.cardHeader}>
             <View style={{ alignItems: "center", justifyContent: "center" }}>
@@ -147,7 +147,7 @@ class PostItem extends React.Component<IPostItemProps> {
               </LinearGradient>
             </View>
             <View style={styles.statContainer}>
-              <Text style={styles.postAuthor}>{author}</Text>
+              <Text testID={`${id}/author`}style={styles.postAuthor}>{author}</Text>
             </View>
             <TouchableOpacity style={{ alignSelf: "flex-end", flex: 1 }}>
               <SvgUri
@@ -223,7 +223,7 @@ class PostItem extends React.Component<IPostItemProps> {
             <View style={Object.assign({})}>
               <Text
                 style={styles.likeCounter}
-                testID={`${id}/likeCounter`}
+                testID={`${id}/likeCount`}
               >{`${totalLikes} Likes`}</Text>
               {generateHiperlinkText(
                 <Text style={styles.viewMoreText} numberOfLines={2}>
@@ -232,7 +232,7 @@ class PostItem extends React.Component<IPostItemProps> {
                 </Text>
               )}
               <TouchableOpacity>
-                <Text onPress={this.openComments} style={styles.viewMoreBtn}>
+                <Text testID={`${id}/commentCount`} onPress={this.openComments} style={styles.viewMoreBtn}>
                   {" "}
                   View {`${commentCount} comments`}
                 </Text>

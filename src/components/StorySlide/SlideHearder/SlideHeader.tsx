@@ -51,7 +51,7 @@ export default class SlideHeader extends React.Component {
             value={this.state.progressValue}
           />
           <View style={styles.bottomContainer}>
-            <View style={styles.avatarContainer}>
+            <View testID={`${user.username}/storyDisplayed`} style={styles.avatarContainer}>
               <Image
                 source={require("~/assets/images/ic4.png")}
                 defaultSource={DEFAULT_AVATAR}

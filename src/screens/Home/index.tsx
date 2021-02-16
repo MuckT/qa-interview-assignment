@@ -68,6 +68,7 @@ export default class Home extends React.PureComponent<any, any> {
             }
             contentInsetAdjustmentBehavior="automatic"
             style={styles.scrollView}
+            testID={"Home"}
           >
             <View>
               <View
