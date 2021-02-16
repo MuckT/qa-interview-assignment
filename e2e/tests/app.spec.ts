@@ -2,7 +2,7 @@
 
 const jestExpect = require("expect");
 
-// Import Mock Data To Test Against - Commented out, but wanted to give a sample
+// Import Mock Data To Test Against
 const mockPosts = [
   {
     "id": 0,
@@ -179,7 +179,7 @@ describe("Activity Feed", () => {
       jestExpect(secondTapLikeCount).toBe(randomPost.likeCount);
     });
 
-    it("should increment the Like count when the Post is double tapped", async () => { 
+    it(`should increment the Like count on ${randomPost.author}'s post when double tapped`, async () => { 
       let attributes = await element(by.id(`${randomPost.id}/likeCount`)).getAttributes();
       const preTapLikeCount = parseFloat(attributes.text.split(" ")[0]);
       await element(by.id(`${randomPost.id}/mainPostContent`)).multiTap(2);

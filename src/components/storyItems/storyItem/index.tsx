@@ -5,7 +5,6 @@ import {colors} from "~/utils/theme";
 import LinearGradient from "react-native-linear-gradient";
 import SvgUri from "react-native-svg-uri";
 import styles from "~/components/storyItems/storyItem/styles";
-import avatars from '~/utils/datas/avatars';
 
 const StoryItem: React.StatelessComponent = (props:any) => {
 
@@ -18,7 +17,7 @@ const StoryItem: React.StatelessComponent = (props:any) => {
                             source={require('~/assets/images/ic11.png')}
                     />
                     <View style={styles.btnPlusBg}>
-                        <SvgUri style={styles.btnPlus} source={require('~/assets/svg/plus.svg')}/>
+                        <SvgUri  style={styles.btnPlus} source={require('~/assets/svg/plus.svg')}/>
                     </View>
 
                 </View>
